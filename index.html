@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>
+      Credit Card Comparator
+    </h1>
+    <h2>
+      What do you expect to put on the card in the first Three/Six Months?
+    </h2>
+    <div>
+      <p>First Three Months Card Expenditures:</p>
+      <input name="three_months" id = "three_expenditure" value = 0/>
+    </div>
+    <div>
+      <p>First Six Months Card Expenditures:</p>
+      <input name="six_months" id  = "six_expenditure" value = 0 />
+    </div>
+
+    <h2>
+      How much do you spend in the following categories per year?
+    </h2>
+
+    <div id="EntryDiv">
+      <div class="Entry">
+        <p class="EntryWords">Target</p>
+        <input
+          name="target"
+          id="target_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Walmart</p>
+        <input
+          name="walmart"
+          id="walmart_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Amazon:</p>
+        <input
+          name="amazon"
+          id="amazon_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Costco:</p>
+        <input
+          name="costco"
+          id="costco_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Online Grocery (not Target or Walmart):</p>
+        <input
+          name="online_grocery"
+          id="online_grocery_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">In Person Grocery (not Target or Walmart):</p>
+        <input
+          name="in_person_grocery"
+          id="in_person_grocery_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Travel (airplane travel):</p>
+        <input
+          name="travel"
+          id="travel_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Dining:</p>
+        <input
+          name="dining"
+          id="dining_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Hotels:</p>
+        <input
+          name="hotel"
+          id="hotel_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Transit (not Airplane travel):</p>
+        <input
+          name="transit"
+          id="transit_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Drugstores:</p>
+        <input
+          name="drugstores"
+          id="drugstores_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Gas:</p>
+        <input 
+          name="gas" 
+          id="gas_entry" 
+          class="EntryInput" 
+          type="number" 
+          value = 0
+          />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Home Improvement:</p>
+        <input
+          name="home_improvement"
+          id="home_improvement_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Fitness Clubs:</p>
+        <input
+          name="fitness_clubs"
+          id="fitness_clubs_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Live Entertainment:</p>
+        <input
+          name="live_entertainment"
+          id="live_entertainment_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Vivid Seats:</p>
+        <input
+          name="vivid_seats"
+          id="vivid_seats_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Department Stores:</p>
+        <input
+          name="department_stores"
+          id="department_stores_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Online Shopping (not Amazon)</p>
+        <input
+          name="online_shopping"
+          id="online_shopping_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Streaming:</p>
+        <input
+          name="streaming"
+          id="streaming_entry"
+          class="EntryInput"
+          type="number"
+          value = 0
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">Other:</p>
+        <input 
+          name="other" 
+          id="other_entry" 
+          class="EntryInput" 
+          type="number" 
+          value = 0       
+        />
+      </div>
+    </div>
+
+    <button id="compute_button">
+      Recommend Cards
+    </button>
+  </body>
+  
+  <script src="script.js"></script>
+</html>
