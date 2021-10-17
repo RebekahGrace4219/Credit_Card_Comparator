@@ -1,34 +1,30 @@
-NOTE: As of Oct 8, 2021 this code is a work in progress.  Intended finish date is 10/11/2021.
-Remaining Items:
-  UI design with CSS
-  Tests for all the credit cards
-  Notifications for good rotating category cards
-  clean read me of these notes
-  
 
 # Credit Comparator
 
-Credit Comparator exists to solve for me a very real problem- what is the best credit card for my particular usage?
-There are so many potential cash back credit cards on the market, and a million lists for "the best card for cash back" or 
-"the best card for students", but I wanted to take my particular spending and tailor a card to meet my needs.
+## Visit
+The output of the code can be seen here: https://credit-comparator.glitch.me
 
 ## Problem
-Compiling credit card data across multiple websites and adding it to an excel sheet was becoming cumbersome. There was a need to
-compare exactly what differnt cards would offer based on an individual's likely spending. 
+Different credit cards can have wildly different cash back percentages, categories, and limits. 
+Additionally, many of them have fees.  Comparing ten or more credit cards by eye is incredibly 
+difficult. Most online lists that suggest which credit card do so in broad strokes, i.e. 
+recommending cards for "people who like to travel" or "people who use wholesale stores" and do 
+not use raw numbers. Compiling credit card data across multiple websites and adding it to an excel 
+sheet would technically work, but it proved very cumbersome. There was a need to
+compare exactly what different cards would offer based on an individual's likely spending. 
 
 ## Solution
-Each spending category's data is sent to a loop that judges each and every card.  Each card's cash back evaluator is stored nicely 
-into its own little function.  Then, when the best handful of cards are found, they are suggested to the user, along with a brief 
-statement as to the benefits of the cards.
+The expenditures and entries are used to judge the cash back for thirteen different credit cards. 
+Then, the top three cash back cards and the top rotating category card are displayed for the user.
 
 ##  Gaps
 Rotating cash back sections are difficult to tackle. It is not known what sections a credit card company will pick before the year 
-begins, and thus the cash back benefits are impossible to predict. The program attempts to assuage the issue by warner the user of
-the highest otherwise ranked rotating category card, allowing them to go the credit card website and judge its usefulness to them.
+begins, and thus the cash back benefits are impossible to predict. The program attempts to work around the issue by warning the user of
+the highest ranked rotating category card, allowing them to go the credit card website and judge its usefulness to them as an individual.
 
 ## Exemplified Skills
 Languages: HTML, CSS, JavaScript
-Testing is evident here, which is an important part of any program. (see tests.js)
+Testing is evident here, which is an important part of any program. (see ./tests/)
 Good Coding Practices 
   Small, Readable Functions
   READ.ME file
@@ -41,3 +37,7 @@ A thank you to my roommate, who saw my comparator spreadsheet and said "Why don'
 
 ## Choose a License
 https://choosealicense.com/licenses/mit/. The standard MIT license is used here.
+
+## Me
+Hi! I'm a graduating computer science student at University of California Davis.  This project was built for my own personal use (thoough my roommates did give it a go).
+I can't promise that the information is 100% correct- credit card companies change their offerings all the time.  I update every two weeks. I do hope it helps you!

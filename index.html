@@ -3,31 +3,50 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+ 
   </head>
 
   <body>
-    <h1>
-      Credit Card Comparator
-    </h1>
+    <!--- Header Section -->
+    <div id="headerWrapper">
+      <h1 id="headerTitle">
+        Credit Card Comparator
+      </h1>
+    </div>
+
+    <!--- Expenditures in the first couple of months Section -->
     <h2>
       What do you expect to put on the card in the first Three/Six Months?
     </h2>
-    <div>
-      <p>First Three Months Card Expenditures:</p>
-      <input name="three_months" id = "three_expenditure" value = 0/>
-    </div>
-    <div>
-      <p>First Six Months Card Expenditures:</p>
-      <input name="six_months" id  = "six_expenditure" value = 0 />
+
+    <div class="containerDiv">
+      <div class="Entry">
+        <p class="EntryWords">First Three Months Card Expenditures:</p>
+        <input
+          class="EntryInput"
+          name="three_months"
+          id="three_expenditure"
+          value="0"
+        />
+      </div>
+      <div class="Entry">
+        <p class="EntryWords">First Six Months Card Expenditures:</p>
+        <input
+          class="EntryInput"
+          name="six_months"
+          id="six_expenditure"
+          value="0"
+        />
+      </div>
     </div>
 
+    <!--- Expenses Section -->
     <h2>
       How much do you spend in the following categories per year?
     </h2>
 
-    <div id="EntryDiv">
+    <div class="containerDiv">
       <div class="Entry">
         <p class="EntryWords">Target</p>
         <input
@@ -35,7 +54,7 @@
           id="target_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -45,7 +64,7 @@
           id="walmart_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -55,7 +74,7 @@
           id="amazon_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -65,7 +84,7 @@
           id="costco_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -75,7 +94,7 @@
           id="online_grocery_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -85,7 +104,7 @@
           id="in_person_grocery_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -95,7 +114,7 @@
           id="travel_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -105,7 +124,7 @@
           id="dining_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -115,7 +134,7 @@
           id="hotel_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -125,7 +144,7 @@
           id="transit_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -135,18 +154,18 @@
           id="drugstores_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
         <p class="EntryWords">Gas:</p>
-        <input 
-          name="gas" 
-          id="gas_entry" 
-          class="EntryInput" 
-          type="number" 
-          value = 0
-          />
+        <input
+          name="gas"
+          id="gas_entry"
+          class="EntryInput"
+          type="number"
+          value="0"
+        />
       </div>
       <div class="Entry">
         <p class="EntryWords">Home Improvement:</p>
@@ -155,7 +174,7 @@
           id="home_improvement_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -165,7 +184,7 @@
           id="fitness_clubs_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -175,7 +194,7 @@
           id="live_entertainment_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -185,7 +204,7 @@
           id="vivid_seats_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -195,7 +214,7 @@
           id="department_stores_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -205,7 +224,7 @@
           id="online_shopping_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
@@ -215,25 +234,154 @@
           id="streaming_entry"
           class="EntryInput"
           type="number"
-          value = 0
+          value="0"
         />
       </div>
       <div class="Entry">
         <p class="EntryWords">Other:</p>
-        <input 
-          name="other" 
-          id="other_entry" 
-          class="EntryInput" 
-          type="number" 
-          value = 0       
+        <input
+          name="other"
+          id="other_entry"
+          class="EntryInput"
+          type="number"
+          value="0"
         />
+      </div>
+      <!-- Fake Entry to allow for appropraite spacing in 1, 2, or 3 columns -->
+      <div class="Entry" id="fake_spacer"></div>
+    </div>
+
+    <div id="recommendDiv">
+      <h2>
+        Best Cards for Cash Back:
+      </h2>
+      <div class="containerDiv recommendDivWrapper">
+        
+        <div id="card1" class="creditNoRotate">
+          <img
+            id="card1_img"
+            class="image"
+            src= "https://cdn.glitch.me/f44dbca5-f65a-437e-8ecc-759bafee8c61%2Fdiscover_it_cash_back_2.jpg?v=1634272111484"
+          />
+
+          <div class="creditNoRotate_words">
+            <p id="card1_link" class="link">
+              <a id="card1_link_value" href = "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited">
+                Learn More Here!
+              </a>
+            </p>
+            <p id="card1_cash_back" class="cashBack">
+              Cash Back: $<span id="card1_cash_back_value"> </span>
+            </p>
+            <p id="card1_annual_fee" class="annualFee">
+              Annual Fee: $<span id="card1_annual_fee_value"></span>
+            </p>
+            <p id="card1_rotate" class="rotate">
+              Rotating Categories: <span id="card1_rotate_value">False</span>
+            </p>
+          </div>
+        </div>
+
+        <div id="card2" class="creditNoRotate">
+          <img
+            id="card2_img"
+            class="image"
+            src="https://cdn.glitch.me/f44dbca5-f65a-437e-8ecc-759bafee8c61%2Ffreedom_flex_card.png?v=1634271031890"
+          />
+
+          <div class="creditNoRotate_words">
+            <p id="card2_link" class="link">
+              <a id="card2_link_value" href = "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited">
+                Learn More Here!
+              </a>
+            </p>
+            <p id="card2_cash_back" class="cashBack">
+              Cash Back: $<span id="card2_cash_back_value"> </span>
+            </p>
+            <p id="card2_annual_fee" class="annualFee">
+              Annual Fee: $<span id="card2_annual_fee_value"></span>
+            </p>
+            <p id="card2_rotate" class="rotate">
+              Rotating Categories: <span id="card2_rotate_value">False</span>
+            </p>
+          </div>
+        </div>
+        
+        <div id="card3" class="creditNoRotate">
+          <img
+            id="card3_img"
+            class="image"
+            src="https://cdn.glitch.me/f44dbca5-f65a-437e-8ecc-759bafee8c61%2Fchase_sapphire_preferred.jpg?v=1634271047510"
+          />
+
+          <div class="creditNoRotate_words">
+            <p id="card3_link" class="link">
+              <a id="card3_link_value" href = "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited">
+                Learn More Here!
+              </a>
+            </p>
+            <p id="card3_cash_back" class="cashBack">
+              Cash Back: $<span id="card3_cash_back_value"> </span>
+            </p>
+            <p id="card3_annual_fee" class="annualFee">
+              Annual Fee: $<span id="card3_annual_fee_value"></span>
+            </p>
+            <p id="card3_rotate" class="rotate">
+              Rotating Categories: <span id="card3_rotate_value">False</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2>
+        Best Card with Rotating Categories:
+      </h2>
+      <div class="containerDiv recommendDivWrapper">
+        
+        <div id="card4" class="creditNoRotate">
+          <img
+            id="card4_img"
+            class="image"
+            src="https://cdn.glitch.me/f44dbca5-f65a-437e-8ecc-759bafee8c61%2Fblue-cash-preferred.webp?v=1634271590749"
+          />
+
+          <div class="creditNoRotate_words">
+            <p id="card4_link" class="link">
+              <a id="card4_link_value" href = "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited">
+                Learn More Here!
+              </a>
+            </p>
+            <p id="card4_cash_back" class="cashBack">
+              Cash Back: $<span id="card4_cash_back_value"> </span>
+            </p>
+            <p id="card4_annual_fee" class="annualFee">
+              Annual Fee: $<span id="card4_annual_fee_value"></span>
+            </p>
+            <p id="card4_rotate" class="rotate">
+              Rotating Categories: <span id="card4_rotate_value">False</span>
+            </p>
+            <p id="card4_rotate_categories" class="rotate_categories">
+              Rotating Categories: <span id="card4_rotate_categories_value">False</span>
+            </p>
+          </div>
+        </div>        
       </div>
     </div>
 
-    <button id="compute_button">
-      Recommend Cards
-    </button>
+    <!--- Recommend Button Section -->
+    <div class="buttonDiv">
+      <button id="compute_button">
+        Recommend Cards
+      </button>
+    </div>
+    
+  <script src="./js/card-data.js"  type = "module"></script>
+  <script src="./js/credit-card.js"  type = "module"></script>
+  <script src="./js/compare-button.js"  type = "module"></script>
+  <script src="./tests/test-data.js"  type = "module"></script>
+  <script src = "./tests/tests.js" type = "module"></script>
   </body>
+
+
   
-  <script src="script.js"></script>
 </html>
