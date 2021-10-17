@@ -1,0 +1,143 @@
+/* Some default values changed*/
+p{
+  display: inline;
+}
+
+body{
+  background-color: #f2f2f2;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-left: 5%
+}
+
+
+/* Credit Card Comparator Header Up Top*/
+#headerWrapper{
+  background-color: #333333;
+  margin: 0 auto;
+  padding: 0;
+  
+}
+
+#headerTitle{
+  margin: 0 auto;
+  padding: 25px;
+  color: #f2f2f2;
+}
+
+
+/* Generic div to hold all the input/ouput sets */
+.containerDiv{
+  background-color:  #53e0cd;
+  border-radius: 15px;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-self: center;
+  justify-content: space-evenly;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 4px;
+  
+}
+
+/*Classes and ids to help with the input sections */
+.Entry{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 4px;
+  width: 510px;
+}
+
+.EntryInput{
+  display: inline;
+  height: 25px;
+  margin: 5px;
+  min-width: 100px;
+  background-color: #f2f2f2;
+  border: 2px;
+  justify-content: right;
+}
+
+.EntryWords{
+  display: inline;
+  width: 50%;
+  margin: 5px;
+  align-self: center;
+  min-width: 300px;
+  padding-right: 10px;
+}
+
+
+/* The recommend button */
+.buttonDiv{
+  display: flex;
+  justify-content: center;
+}
+ 
+#compute_button{
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #333333;
+  color: white;
+  margin: 25px;
+  align-self: center;
+  justify-self: center;
+
+}
+
+
+/* The ouput divs */
+#recommendDiv{
+  display: None;
+}
+
+.recommendDivWrapper{
+  background-color: #69CA8C;
+}
+
+
+/* Specifically the divs where the cards are given */
+.creditNoRotate{
+  border: 2px black;
+  border-style: dotted;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width:100%;
+  margin: 10px;
+}
+
+.image{
+  width:221px;
+  height:136px;
+  padding: 4%;
+  align-self: center;
+}
+
+.link, .cashBack, .annualFee, .rotate, .rotateCategories{
+  display: block;  
+}
+
+.creditNoRotate_words{
+  margin: 4%;
+}
+
+#categoriesRotateList{
+  display: block;
+}
+
+/*Media Query used to switch ordering of result cards*/
+/*Two Columns moves to one, because at small size they get crowded */
+@media(max-width: 630px){
+  .creditNoRotate{
+    display: block;
+  }
+}
