@@ -3,6 +3,21 @@ import * as credit_card from "./credit-card.js";
 
 //Set the recommemnd button to recommend cards
 document.getElementById("compute_button").addEventListener("click", recommend);
+var function_hash = {
+  "Chase_Freedom_Unlimited": credit_card.chase_freedom_unlimited,
+  "Chase_Freedom_Flex": credit_card.chase_freedom_flex,
+  "Chase_Sapphire_Preferred": credit_card.chase_sapphire_preferred,
+  "Citi_Custom_Cash": credit_card.citi_custom_cash,
+  "Citi_Double_Cash": credit_card.citi_double_cash,
+  "Wells_Fargo_Active_Cash": credit_card.wells_fargo_active_cash,
+  "American_Express_Blue_Cash_Preferred": credit_card.american_express_blue_cash_preferred,
+  "American_Express_Blue_Cash_Everyday": credit_card.american_express_blue_cash_everyday,
+  "Bank_of_America_Customized_Cash": credit_card.bank_of_america_customized_cash,
+  "Discover_It_Cash_Back": credit_card.discover_it_cash_back,
+  "Capital_One_SavorOne_Rewards": credit_card.capital_one_savor_one_rewards,
+  "Capital_One_Quicksilver_Rewards": credit_card.capital_one_quicksilver_rewards,
+  "Capital_One_QuicksilverOne_Rewards": credit_card.capital_one_quicksilver_one_rewards
+}
 
 /*
   recommend: suggest 4 cards (3 top cash back + 1 rotating category card) to the user based on their purchase tendencies
@@ -12,43 +27,31 @@ document.getElementById("compute_button").addEventListener("click", recommend);
 function recommend() {
   // Grab the values from the input
   let input_values = grab_values();
-
+  let prev_cards = grab_prev_cards();
+  
   //Calculate the cash back for each card
   let results = [];
-  let function_array = [
-      credit_card.chase_freedom_unlimited,
-      credit_card.chase_freedom_flex,
-      credit_card.chase_sapphire_preferred,
-      credit_card.citi_custom_cash,
-      credit_card.citi_double_cash,
-      credit_card.wells_fargo_active_cash,
-      credit_card.american_express_blue_cash_preferred,
-      credit_card.american_express_blue_cash_everyday,
-      credit_card.bank_of_america_customized_cash,
-      credit_card.discover_it_cash_back,
-      credit_card.capital_one_savor_one_rewards,
-      credit_card.capital_one_quicksilver_rewards,
-      credit_card.capital_one_quicksilver_one_rewards
-    ];
   
-  
-  for(let function_key in function_array){
-    results.push((function_array[function_key](input_values.expenditures, input_values.entry)));
+  for(let function_key in function_hash){
+    if (prev_cards.includes(function_key)) {
+       continue;
+    }
+    results.push((function_hash[function_key](input_values.expenditures, input_values.entry)));
   }
   console.log(results);
+  
   
   //sort the cash back highest to lowest
   //insertion sort is used, because it is known that the array is small
   insertion_high_to_low_sort(results);
-  console.log(results);
+  
   
   //determine the top 3 cards
   let top_3 = determine_top_3(results);
-  console.log(top_3);
+  
   //determine the top rotating card
   let top_rotating = determine_rotating(results);
-  console.log(top_rotating);
-  console.log(results);
+
   //add the cards to the HTML
   add_cards_no_rotate(top_3);
   add_rotate(top_rotating);
@@ -57,11 +60,9 @@ function recommend() {
   let recommendDivShow = document.getElementById("recommendDiv");
   console.log(recommendDivShow.style.display);
   if (recommendDivShow.style.display != 'block'){
-    console.log("here");
     document.getElementById("recommendDiv").style.display = 'block';
   }
 }
-
 
 
 /*
@@ -182,6 +183,19 @@ function determine_rotating(arr){
   return ans;
 }
 
+function grab_prev_cards(){
+  let prev_cards = [];
+  
+  for (let key in function_hash){
+    let checkbox_id = key + "_Checkbox"
+    console.log("space"+checkbox_id+"space")
+    if (document.getElementById(checkbox_id).checked){
+      prev_cards.push(key);
+    }
+  }
+  
+  return prev_cards;
+}
 /* 
   add_cards_no_rotate(list): place the top three cards into the html for the user to see
     list: three {name: str, cash_back: int} values, in order greatest to smallest
@@ -203,6 +217,7 @@ function add_cards_no_rotate(list) {
     document.getElementById(
       "card" + i.toString() + "_annual_fee_value"
     ).textContent = values[card_name].fee;
+    document.getElementById("card"+i.toString()+"_bonus_value").textContent = list[i - 1].bonus;
     
     if (values[card_name].rotating){
        document.getElementById(
@@ -215,6 +230,7 @@ function add_cards_no_rotate(list) {
     ).textContent = "No";
     }
    
+    
   }
 }
 
@@ -253,6 +269,7 @@ function add_rotate(card) {
     values[card_name].link;
   document.getElementById("card4_cash_back_value").textContent =
     card.cash_back;
+  document.getElementById("card4_bonus_value").textContent = card.bonus;
   document.getElementById("card4_annual_fee_value").textContent =
     values[card_name].fee;
   document.getElementById("card4_rotate_value").textContent = "Yes";
