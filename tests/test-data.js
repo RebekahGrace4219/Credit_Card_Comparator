@@ -29,18 +29,18 @@ let tests = {
     },
 
     ans: {
-      "Chase Freedom Unlimited": 999.6,
-      "Chase Freedom Flex": 962.9,
+      "Chase Freedom Unlimited": 799.6,
+      "Chase Freedom Flex": 762.9,
       "Chase Sapphire Preferred": 356.4, 
       "Citi Custom Cash": 456.9,
       "Citi Double Cash": 433.8,
       "Wells Fargo Active Cash": 433.8,
-      "American Express Blue Cash Preferred": 812.4,
-      "American Express Blue Cash Everyday": 600.9,
+      "American Express Blue Cash Preferred": 462.4,
+      "American Express Blue Cash Everyday": 350.9,
       "Bank Of America Customized Cash": 328.9,
       "Discover It Cash Back": 433.8,
-      "Capital One SavorOne Rewards": 714.9,
-      "Capital One Quicksilver Rewards": 525.35,
+      "Capital One SavorOne Rewards": 514.9,
+      "Capital One Quicksilver Rewards": 325.35,
       "Capital One QuicksilverOne Rewards": 286.35
     }
   },
@@ -80,8 +80,8 @@ let tests = {
       "Citi Custom Cash": 482.2,
       "Citi Double Cash": 484.4,
       "Wells Fargo Active Cash": 484.4,
-      "American Express Blue Cash Preferred": 814.6,
-      "American Express Blue Cash Everyday": 625.4,
+      "American Express Blue Cash Preferred": 464.6,
+      "American Express Blue Cash Everyday": 375.4,
       "Bank Of America Customized Cash": 366.2,
       "Discover It Cash Back": 484.4,
       "Capital One SavorOne Rewards": 466.59,
@@ -118,8 +118,8 @@ let tests = {
       other: 2400
     },
     ans: {
-      "Chase Freedom Unlimited": 1925.65,
-      "Chase Freedom Flex": 1806.5,
+      "Chase Freedom Unlimited": 1725.65,
+      "Chase Freedom Flex": 1606.5,
       "Chase Sapphire Preferred": 1199.2,
       "Citi Custom Cash": 753.7,
       "Citi Double Cash": 1027.4, 
@@ -128,8 +128,8 @@ let tests = {
       "American Express Blue Cash Everyday": 634.5,
       "Bank Of America Customized Cash": 713.7,
       "Discover It Cash Back": 1027.4,
-      "Capital One SavorOne Rewards": 1192.69,
-      "Capital One Quicksilver Rewards": 970.55,
+      "Capital One SavorOne Rewards": 992.69,
+      "Capital One Quicksilver Rewards": 770.55,
       "Capital One QuicksilverOne Rewards": 731.55
     }
   },
@@ -160,18 +160,18 @@ let tests = {
     },
 
     ans: {
-      "Chase Freedom Unlimited": 1135.62,
-      "Chase Freedom Flex": 1038.75,
-      "Chase Sapphire Preferred": 1499.75,
-      "Citi Custom Cash": 768.75,
+      "Chase Freedom Unlimited": 935.62,
+      "Chase Freedom Flex": 838.75,
+      "Chase Sapphire Preferred": 499.75,
+      "Citi Custom Cash": 568.75,
       "Citi Double Cash": 657.5, 
-      "Wells Fargo Active Cash": 857.5,
-      "American Express Blue Cash Preferred": 913.75,
-      "American Express Blue Cash Everyday": 718.75,
-      "Bank Of America Customized Cash" : 643.75,
+      "Wells Fargo Active Cash": 657.5,
+      "American Express Blue Cash Preferred": 563.75,
+      "American Express Blue Cash Everyday": 468.75,
+      "Bank Of America Customized Cash" : 443.75,
       "Discover It Cash Back": 657.5,
-      "Capital One SavorOne Rewards": 936.85,
-      "Capital One Quicksilver Rewards": 693.12,
+      "Capital One SavorOne Rewards": 736.85,
+      "Capital One Quicksilver Rewards": 493.12,
       "Capital One QuicksilverOne Rewards": 454.12
     }
     

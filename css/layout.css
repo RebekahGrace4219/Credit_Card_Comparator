@@ -44,6 +44,17 @@ h2 {
   
 }
 
+/* Checkbox Classes */
+.CheckboxEntry{
+  vertical-align: middle;
+  padding: 5px;
+  width: 300px;
+}
+
+label{
+  vertical-align: middle;
+}
+
 /*Classes and ids to help with the input sections */
 .Entry{
   display: flex;
@@ -51,6 +62,8 @@ h2 {
   flex-wrap: wrap;
   margin: 4px;
   width: 510px;
+  height: 37px;
+  align-content: center;
 }
 
 .EntryInput{
@@ -71,7 +84,6 @@ h2 {
   min-width: 300px;
   padding-right: 10px;
 }
-
 
 /* The recommend button */
 .buttonDiv{

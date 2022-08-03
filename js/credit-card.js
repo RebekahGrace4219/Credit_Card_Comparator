@@ -2,12 +2,13 @@
 function chase_freedom_unlimited(expenditures, entry) {
   let result_obj = {
     cash_back: 0,
-    name: "Chase Freedom Unlimited"
+    name: "Chase Freedom Unlimited",
+    bonus: 0
   };
 
   // Cash back bonus of $200 for $500 spent in the first three months
   if (expenditures.three_months >= 500) {
-    result_obj.cash_back = result_obj.cash_back + 200;
+    result_obj.bonus = 200;
   }
 
   //5% back on up to 12000 grocery purchases for the first year
@@ -58,12 +59,13 @@ function chase_freedom_unlimited(expenditures, entry) {
 function chase_freedom_flex(expenditures, entry) {
   let result_obj = {
     cash_back: 0,
-    name: "Chase Freedom Flex"
+    name: "Chase Freedom Flex",
+    bonus: 0
   };
 
   // Cash back bonus of $200 for $500 spent in the first three months
   if (expenditures.three_months >= 500) {
-    result_obj.cash_back = result_obj.cash_back + 200;
+    result_obj.bonus = 200;
   }
 
   //5% back on up to 12000 grocery purchases for the first year
@@ -113,12 +115,13 @@ function chase_sapphire_preferred(expenditures, entry) {
   // $95 Annual Fee
   let result_obj = {
     cash_back: -95,
-    name: "Chase Sapphire Preferred"
+    name: "Chase Sapphire Preferred",
+    bonus: 0
   };
 
-  // Cash back bonus of $200 for $500 spent in the first three months
+  // Cash back bonus of $600 for $4000 spent in the first three months
   if (expenditures.three_months >= 4000) {
-    result_obj.cash_back = result_obj.cash_back + 1000;
+    result_obj.bonus = 600;
   }
 
   // $50 off hotels and %5 back outside the 50
@@ -151,7 +154,6 @@ function chase_sapphire_preferred(expenditures, entry) {
   }
 
   result_obj.cash_back = result_obj.cash_back + add_value;
-
   
   //truncate the value to keep two decimals at most
   result_obj.cash_back = truncate(result_obj.cash_back);
@@ -163,12 +165,13 @@ function chase_sapphire_preferred(expenditures, entry) {
 function citi_custom_cash(expenditures, entry) {
   let result_obj = {
     cash_back: 0,
-    name: "Citi Custom Cash"
+    name: "Citi Custom Cash",
+    bonus: 0
   };
 
-  // Cash back bonus of $200 for $500 spent in the first three months
+  // Cash back bonus of $200 for $750 spent in the first three months
   if (expenditures.three_months >= 750) {
-    result_obj.cash_back = result_obj.cash_back + 200;
+    result_obj.bonus = 200;
   }
 
   //Caculate the total spending on the card
@@ -219,7 +222,8 @@ function citi_custom_cash(expenditures, entry) {
 function citi_double_cash(expenditures, entry) {
   let result_obj = {
     cash_back: 0,
-    name: "Citi Double Cash"
+    name: "Citi Double Cash",
+    bonus: 0
   };
 
   // 2% everything on the first year
@@ -241,12 +245,13 @@ function citi_double_cash(expenditures, entry) {
 function wells_fargo_active_cash(expenditures, entry) {
   let result_obj = {
     cash_back: 0,
-    name: "Wells Fargo Active Cash"
+    name: "Wells Fargo Active Cash",
+    bonus: 0
   };
 
   // Cash back bonus of $200 for $500 spent in the first three months
   if (expenditures.three_months >= 1000) {
-    result_obj.cash_back = result_obj.cash_back + 200;
+    result_obj.bonus =  200;
   }
 
   //2% every dollar spent card
@@ -269,12 +274,13 @@ function american_express_blue_cash_preferred(expenditures, entry) {
   // $95 Annual Fee
   let result_obj = {
     cash_back: -95,
-    name: "American Express Blue Cash Preferred"
+    name: "American Express Blue Cash Preferred", 
+    bonus: 0
   };
 
-  // Cash back bonus of $200 for $500 spent in the first three months
+  // Cash back bonus of $350 for $3000 spent in the first three months
   if (expenditures.six_months >= 3000) {
-    result_obj.cash_back = result_obj.cash_back + 350;
+    result_obj.bonus + 350;
   }
 
   //6% back on up to 6000 grocery purchases for the first year
@@ -325,12 +331,13 @@ function american_express_blue_cash_preferred(expenditures, entry) {
 function american_express_blue_cash_everyday(expenditures, entry) {
   let result_obj = {
     cash_back: 0,
-    name: "American Express Blue Cash Everyday"
+    name: "American Express Blue Cash Everyday", 
+    bonus: 0
   };
 
   // Cash back bonus of $200 for $2000 spent in the first six months
   if (expenditures.six_months >= 2000) {
-    result_obj.cash_back = result_obj.cash_back + 250;
+    result_obj.bonus = 250;
   }
 
   //3% back on up to 6000 grocery purchases for the first year, 1% on the rest
@@ -375,12 +382,13 @@ function american_express_blue_cash_everyday(expenditures, entry) {
 function bank_of_america_customized_cash(expenditures, entry) {
   let result_obj = { 
     cash_back: 0, 
-    name: "Bank Of America Customized Cash" 
+    name: "Bank Of America Customized Cash", 
+    bonus: 0
   };
   
   // Cash back bonus of $200 for $1000 spent in the first 90 days
   if (expenditures.three_months >= 1000) {
-    result_obj.cash_back = result_obj.cash_back + 200;
+    result_obj.bonus = 200;
   }
   
   // 3% back on highest category 
@@ -445,7 +453,8 @@ function bank_of_america_customized_cash(expenditures, entry) {
 function discover_it_cash_back(expenditures, entry) {
   let result_obj = {
     cash_back: 0,
-    name: "Discover It Cash Back"
+    name: "Discover It Cash Back", 
+    bonys: 0
   };
 
   // 2% everything on the first year
@@ -467,12 +476,13 @@ function discover_it_cash_back(expenditures, entry) {
 function capital_one_savor_one_rewards(expenditures, entry) {
   let result_obj = {
     cash_back: 0,
-    name: "Capital One SavorOne Rewards"
+    name: "Capital One SavorOne Rewards",
+    bonus: 0
   };
 
   // Cash back bonus of $200 for $500 spent in the first three months
   if (expenditures.three_months >= 500) {
-    result_obj.cash_back = result_obj.cash_back + 200;
+     result_obj.bonus =  200;
   }
 
   let arr = ["dining", "live_entertainment", "streaming", "in_person_grocery", "online_grocery"];
@@ -504,12 +514,13 @@ function capital_one_savor_one_rewards(expenditures, entry) {
 function capital_one_quicksilver_rewards(expenditures, entry) {
   let result_obj = {
     cash_back: 0,
-    name: "Capital One Quicksilver Rewards"
+    name: "Capital One Quicksilver Rewards", 
+    bonus: 0
   };
 
   // Cash back bonus of $200 for $500 spent in the first three months
   if (expenditures.three_months >= 500) {
-    result_obj.cash_back = result_obj.cash_back + 200;
+      result_obj.bonus = 200;
   }
 
   // 1.5% on everything
@@ -533,7 +544,8 @@ function capital_one_quicksilver_one_rewards(expenditures, entry) {
   // 39$ Annual Fee
   let result_obj = {
     cash_back: -39,
-    name: "Capital One QuicksilverOne Rewards"
+    name: "Capital One QuicksilverOne Rewards", 
+    bonus: 0
   };
 
   // 1.5% on everything

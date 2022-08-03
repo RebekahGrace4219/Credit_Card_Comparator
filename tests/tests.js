@@ -2,8 +2,6 @@ import * as credit_card from '../../js/credit-card.js'
 
 import {tests} from './test-data.js'
 
-
-
 function run_tests(){
   let function_array = [
       credit_card.chase_freedom_unlimited,
